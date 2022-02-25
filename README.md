@@ -1,10 +1,12 @@
 # 💡 phpwndb : search credentials leaked on pwndb database with variation
 
 PHPwnDB is an adaptation of tools like [pwndb.py](https://github.com/davidtavarez/pwndb) in PHP for using it simply via a web browser.
+PHPwnDB permits search based on `domain.tld`, `username`, `firstname lastname` and the use of **wildcard**.
+Results can be filtered to produce instant wordlists *read-to-use* through hashs cracker tools or Burp Intruder.
 
 ## 🔍 How it works?
 
-PHPWnDB use `tor` to interact with `http://pwndb2am4tzkvold.onion`. So before use PHPwnDB, the **Tor** service must be running as a local proxy (default : `socks5h://127.0.0.1:9050`).
+PHPwnDB use `tor` to interact with `http://pwndb2am4tzkvold.onion`. So before use PHPwnDB, the **Tor** service must be running as a local proxy (default : `socks5h://127.0.0.1:9050`).
 
 PHPWnDB allows an auditor to :
 
@@ -30,12 +32,16 @@ All results of PHPwnDB are displayed in a textarea whick can be easyly filtered 
 ## Then run tor in a separated shell / service:
 tor & # or through a new screen command
 ## once tor is started, the service listen on 127.0.0.1:9050
+## Be sure you have Apache + PHP7 + Curl
+# apt install libapache2-mod-php php-curl
+# phpenmod curl
+# service apache2 restart
 ## deploy PHPwnDB into Apache/PHP document root
 cd /var/www/html/
 git clone https://github.com/yanncam/phpwndb/
 ```
 
-Then, just browse `http://SERVER/phpwndb.php`.
+Then, just browse `http://SERVER/phpwndb/phpwndb.php`.
 
 ## 🔥 Demonstration / Example / How to use?
 
