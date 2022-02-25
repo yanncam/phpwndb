@@ -8,7 +8,7 @@ Results can be filtered to produce instant wordlists *read-to-use* through hashs
 
 PHPwnDB use `tor` to interact with `http://pwndb2am4tzkvold.onion`. So before use PHPwnDB, the **Tor** service must be running as a local proxy (default : `socks5h://127.0.0.1:9050`).
 
-PHPWnDB allows an auditor to :
+PHPwnDB allows an auditor to :
 
 - Search credentials from a `domain.tld` to retrieve leaks matching emails like `xxx@domain.tld`;
 - Search credentials from a specific login or email, like `bill.gates` or `bgates@microsoft.com`;
