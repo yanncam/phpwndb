@@ -49,7 +49,11 @@ Then, just browse `http://SERVER/phpwndb/phpwndb.php`.
 
 PHPwnDB needs **Tor** deployed locally to access `http://pwndb2am4tzkvold.onion`. The PHP script proxyfies his request through the Tor proxy listening on `127.0.0.1:9050` by default.
 
-DNS resolution of the domain `pwndb2am4tzkvold.onion` needs to be done through the Tor network to work. So the PHP script use the **Curl** PHP library with the `CURLOPT_PROXYTYPE`` define to `CURLPROXY_SOCKS5_HOSTNAME` (7). Plus, the scheme to reference the proxy target is explicitly defined to `socks5h://127.0.0.1:9050`. The `h` at the end of `sock5h` is needed to delegate DNS resolution to the proxy (Tor) itself (need PHP 7 at least with recent Curl module).
+DNS resolution of the domain `pwndb2am4tzkvold.onion` needs to be done through the Tor network to work. 
+
+So the PHP script use the **Curl** PHP library with the `CURLOPT_PROXYTYPE` define to `CURLPROXY_SOCKS5_HOSTNAME` (7). 
+
+Plus, the scheme to reference the proxy target is explicitly defined to `socks5h://127.0.0.1:9050`. The `h` at the end of `sock5h` is needed to delegate DNS resolution to the proxy (Tor) itself (need PHP 7 at least with recent Curl module).
 
 ## 🍻 Credits
 
