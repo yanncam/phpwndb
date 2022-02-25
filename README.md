@@ -71,6 +71,8 @@ So the PHP script use the **Curl** PHP library with the `CURLOPT_PROXYTYPE` defi
 
 Plus, the scheme to reference the proxy target is explicitly defined to `socks5h://127.0.0.1:9050`. The `h` at the end of `sock5h` is needed to delegate DNS resolution to the proxy (Tor) itself (need PHP 7 at least with recent Curl module).
 
+The `pwndb2am4tzkvold.onion` domain seems to be regularly unavailable for long periods (several days or even 1-2 weeks) within the same year (observation made over the last 2 years). As a result, PHPwnDB may not be functional during these times.
+
 ## 🍻 Credits
 
 - GreetZ to all the Le££e team :)
