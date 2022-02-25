@@ -4,6 +4,8 @@ PHPwnDB is an adaptation of tools like [pwndb.py](https://github.com/davidtavare
 PHPwnDB permits search based on `domain.tld`, `username`, `firstname lastname` and the use of **wildcard**.
 Results can be filtered to produce instant wordlists *read-to-use* through hashs cracker tools or Burp Intruder.
 
+PHPwnDB can be very usefull during security assessments or Bug Bounty, when *firstname lastname* or *email* of the web-developper / maintener / webmaster / author of the web application is discovered in footer, CSS file or HTML comment. By providing these information to PHPwnDB, a list of potential credentials already leaked by the past can be quickly tested against the web-app.
+
 ## 🔍 How it works?
 
 PHPwnDB use `tor` to interact with `http://pwndb2am4tzkvold.onion`. So before use PHPwnDB, the **Tor** service must be running as a local proxy (default : `socks5h://127.0.0.1:9050`).
