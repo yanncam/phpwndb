@@ -14,11 +14,25 @@ PHPwnDB allows an auditor to :
 
 - Search credentials from a `domain.tld` to retrieve leaks matching emails like `xxx@domain.tld`;
 - Search credentials from a specific login or email, like `bill.gates` or `bgates@microsoft.com`;
-- Search credentials from a specific identity (first name + last name), by computing permutation, login generation and others combinaisons.
+- Search credentials from a specific identity (firstname + lastname), by computing permutation, login generation and others combinaisons.
 
 Wildcard can be used like : `_` to indicate any character. So it possible to make search like : 
 - `bill_gates` to find `bill.gates, bill-gates, bill0gates, etc.`;
 - `bgates_, bgates__, bgates___` to find `bgates0, bgates10, bgates999, bgatesadm, etc.`
+
+The search based on firstname + lastname sanitize the diacritics and all character not allowed in a potential email-address, then compute several combinaisons like :
+- `firstnamelastname`
+- `lastnamefirstname`
+- `flastname`
+- `lfirstname`
+- `firstname.lastname`
+- `firstname-lastname`
+- `firstname_lastname` (wildcard)
+- `lastname.firstname`
+- `lastname-firstname`
+- `lastname_firstname` (wildcard)
+- All the previous combinaison with additional wildcard `_` at the end
+- All the previous combinaison with two additional wildcards `__` at the end
 
 All results of PHPwnDB are displayed in a textarea whick can be easyly filtered to:
 - Display only **logins** (part before any `@`);
