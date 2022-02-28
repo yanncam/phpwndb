@@ -61,7 +61,15 @@ git clone https://github.com/yanncam/phpwndb/
 
 Then, just browse `http://[SERVER]/phpwndb/phpwndb.php`.
 
+![PHPwnDB01](img/phpwndb01.png)
+
 ## 🔥 Demonstration / Example / How to use?
+
+Simply use one of the three textareas available to search `domain.tld` based, `username` based or `firstname + lastname` permutations based :
+
+![PHPwnDB02](img/phpwndb02.png)
+
+Results in the last textarea can be dynamicaly *on-the-fly* filtered and copied.
 
 ## 🧰 To go deeper...
 
